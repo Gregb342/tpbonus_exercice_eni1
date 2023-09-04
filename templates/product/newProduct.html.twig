@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+ <div class="container-fluid col-5">
+     <h1>Créer un produit | <a href="{{ path('app_main_products') }}" class="btn btn-sm btn-success">Retour aux produits</a></h1>
+
+     <div class="container-fluid card row p-3">
+         {{form_start(productForm)}}
+
+         {{form_widget(productForm)}}
+
+        <button class="btn btn-primary" type="submit">Enregistrer le produit</button>
+
+         {{form_end(productForm)}}
+
+     </div>
+ </div>
+
+
+
+{% endblock %}

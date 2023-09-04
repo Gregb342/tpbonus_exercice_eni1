@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Produit : {{ product.label }}
+{% endblock %}
+{% block main %}
+    <article class="container-fluid col-md-8">
+    <div class="card">
+        <h1 class="card-header">Produit : {{ product.label }} </h1>
+
+        <div class="card-body">
+            <h4>Reference : {{ product.reference }}</h4>
+            <p>Prix : <b>{{ product.price }} €</b></p>
+            <p>Description : {{ product.description }} </p>
+            <p>Categorie : {{ product.category.libelle }}</p>
+            <p>Stock actuel : {{ product.stock }}</p>
+            <p>Date de creation : {{ product.dateAdd|date('Y-m-d') }}</p>
+            <p>Date d'édition : {{ product.dateEdit|date('Y-m-d H:i:s') }}</p>
+            <p>Catégorie : TODO</p>
+            <p>Article publié : {{ product.published ? 'Oui' : 'Non' }}
+            </p>
+        </div>
+
+        <div class="card-footer">
+            <a href="{{ path('app_main_products') }}" class="btn btn-primary">Retour aux produits</a>
+
+            <a href="{{ path('app_main_editProduct', {'id': product.id}) }}" class="btn btn-warning">Modifier le produit</a>
+
+            <a href="{{ path('app_main_deleteProduct', {'id': product.id}) }}" class="btn btn-danger">Supprimer le produit</a>
+        </div>
+
+    </div>
+    </article>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container-fluid col-5">
+        <h1>Modifier un produit | <a href="{{ path('app_main_productById', {'id': product.id}) }}" class="btn btn-sm btn-success">Retour à la fiche produit</a></h1>
+
+        <div class="container-fluid card row p-3">
+            {{form_start(productForm)}}
+
+            {{form_widget(productForm)}}
+
+            <button class="btn btn-primary" type="submit">Enregistrer les modifications</button>
+
+            {{form_end(productForm)}}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

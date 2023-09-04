@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    <h1 class="container-fluid col-8 mt-2">Catégories ({{ categories|length }}) | <a href="{{ path('app_main_addCategory') }}"
+                                                                                   class="btn btn-sm btn-success">            Ajouter une catégorie</a></h1>
+    <div class="container-fluid col-8 row">
+
+        {% for category in categories %}
+            <article class="container-fluid col-sm-4 p-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de la catégorie : {{ category.libelle }}</h5>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}

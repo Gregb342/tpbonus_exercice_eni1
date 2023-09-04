@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<div class="container-md">
+    <h1>Bienvenue chez <span style="color: #0073e6;">Infomatos</span></h1>
+    <section>
+        <p>Plongez dans le monde passionnant de la technologie avec <strong>Infomatos</strong>, votre guichet unique
+            pour tout ce qui concerne le matériel informatique de pointe. Que vous soyez un professionnel à la recherche
+            des dernières innovations technologiques pour votre entreprise ou un passionné d'informatique cherchant à
+            améliorer votre équipement personnel, nous sommes là pour vous accompagner dans votre voyage.</p>
+    </section>
+    <section>
+        <p>Chez <strong>Infomatos</strong>, nous croyons en la puissance de la technologie pour façonner un avenir
+            meilleur. C'est pourquoi nous nous efforçons constamment de vous offrir une sélection exceptionnelle de
+            produits informatiques de haute qualité, soigneusement sélectionnés par nos experts. Que ce soit des
+            ordinateurs portables ultraperformants, des composants de pointe, des périphériques innovants, ou des
+            accessoires essentiels, vous trouverez tout ce dont vous avez besoin pour répondre à vos besoins
+            informatiques chez nous.</p>
+    </section>
+    <section>
+        <p>Naviguez à travers notre site convivial, explorez nos catégories diverses et découvrez les dernières
+            tendances du monde informatique. Chez <strong>Infomatos</strong>, nous croyons que l'innovation ne connaît
+            pas de limites, c'est pourquoi nous vous offrons un accès facile aux dernières technologies et aux meilleurs
+            produits du marché.</p>
+    </section>
+    <section>
+        <p>Explorez, choisissez, et faites de votre expérience informatique un succès avec <span
+                    style="color: #0073e6;">Infomatos</span>. Bienvenue dans le futur de la technologie.</p>
+    </section></div>
+    <div class="container-md container-fluid p-4">
+    <a href="{{ path('app_main_products') }}"
+       class="btn btn-sm btn-success">Liste des produits</a>
+    <a href="{{ path('app_main_addProduct') }}"
+       class="btn btn-sm btn-success">Ajouter un produit</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    <h1 class="container-fluid col-8 mt-2">Produits disponibles ({{ products|length }}) | <a href="{{ path('app_main_addProduct') }}"
+                                                  class="btn btn-sm btn-success">Ajouter un produit</a></h1>
+    <div class="container-fluid col-8 row">
+
+        {% for product in products %}
+            <article class="container-fluid col-sm-4 p-3">
+                <div class="card" style="width: 18rem;">
+                    {#            <img class="card-img-top" src="..." alt="Image du produit"> #}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.label }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Prix : {{ product.price }} €</h6>
+                        <p class="card-text">{{ product.description }}t</p>
+                        <a href="{{ path('app_main_productById', {'id': product.id}) }}" class="btn btn-primary">Afficher le
+                            produit</a>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}
